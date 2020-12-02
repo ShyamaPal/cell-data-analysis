@@ -53,6 +53,14 @@ python -m cell_data_analysis --input-path  D:\Archive\input --output-path D:\Arc
 pytest test
 ```
 
+### Deployment
+The code can be deployed in the desired environment through Jenkins pipeline by building docker image with the python environment and running the test cases through pytest.
+It can be scheduled to run in a dockerized way where any of the run commands can be executed.
+
+### Configuration
+The Spark configurations can be handled by running spark-submit command and passing the configurations dynamically.
+Example: `spark-submit --conf <> --master <> cell_data_analysis/_main_.py`
+
 ### Improvement ideas
 * use click instead of argparse and make it as an commandline
 * improve test coverage
