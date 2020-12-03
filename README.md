@@ -31,6 +31,7 @@ The calculated values should be the following:
 * Install pyspark and other dependencies from the Pipfile and create the virtual environment by running the below command.
 ```shell script
 pipenv shell
+pipenv install
 ```
 ### Run application
 * Provide the input path as the parent of all the different datasets.
@@ -59,7 +60,7 @@ It can be scheduled to run in a dockerized way where any of the run commands can
 
 ### Configuration
 The Spark configurations can be handled by running spark-submit command and passing the configurations dynamically.
-Example: `spark-submit --conf <> --master <> cell_data_analysis/_main_.py`
+Example: `spark-submit --conf <> --master <> cell_data_analysis/__main__.py`
 
 ### Improvement ideas
 * use click instead of argparse and make it as an commandline
